@@ -7,9 +7,17 @@ $settings = App\Models\Setting::getSettings();
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <!-- Company Info -->
             <div>
-                <h3 class="text-2xl font-bold text-yellow-400 mb-6">Dalbo Kencana Kreasi</h3>
+            <a href="{{ route('home') }}" class="text-2xl font-bold flex items-center">
+                        @if(!empty($settings['site_logo']))
+                            <img src="{{ asset('storage/' . $settings['site_logo']) }}" 
+                                 alt="{{ $settings['site_name'] ?? 'Dalbo Kencana Kreasi' }}"
+                                 class="h-16 w-auto">
+                        @else
+                            {{ $settings['site_name'] ?? 'Dalbo Kencana Kreasi' }}
+                        @endif
+                    </a>
                 <p class="mb-6">
-                    Your trusted partner for all automotive needs. Specializing in karoseri, engine maintenance, and professional body repair services.
+                PT Dalbo Kencana Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif.
                 </p>
                 <div class="flex space-x-4">
                     @if(isset($settings['social_media']['facebook']))
@@ -80,7 +88,7 @@ $settings = App\Models\Setting::getSettings();
             </div>
             
             <!-- Newsletter -->
-            <div>
+            <!-- <div>
                 <h3 class="text-xl font-semibold text-yellow-400 mb-6">Newsletter</h3>
                 <p class="mb-4">Subscribe to our newsletter for updates and special offers.</p>
                 <form action="{{ route('newsletter.subscribe') }}" method="POST" class="space-y-4">
@@ -94,7 +102,7 @@ $settings = App\Models\Setting::getSettings();
                             class="w-full bg-yellow-400 text-black py-2 rounded font-semibold hover:bg-yellow-300 transition-colors">
                         Subscribe
                     </button>
-                </form>
+                </form> -->
             </div>
         </div>
         

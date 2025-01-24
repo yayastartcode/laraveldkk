@@ -17,7 +17,7 @@
                                     {{ $slide->title }}
                                 </h1>
                                 <p class="text-xl md:text-2xl text-yellow-400/80 mb-8">
-                                    {{ $slide->description }}
+                                    {{ $slide->subtitle }}
                                 </p>
                                 @if($slide->button_text)
                                     <a href="{{ $slide->button_url }}" 
@@ -46,7 +46,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-yellow-400 mb-4">What Our Clients Say</h2>
-                    <p class="text-yellow-400/60">Hear from our satisfied customers about their experience with our services</p>
+                    <p class="text-yellow-400/60">Dengar apa kata klien kami tentang service Pt Dalbo Kencana Kreasi</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

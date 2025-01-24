@@ -54,11 +54,11 @@
                 </a>
 
                 <!-- Services -->
-                <a href="{{ route('admin.services.index') }}" 
+                <!-- <a href="{{ route('admin.services.index') }}" 
                    class="flex items-center px-4 py-2 text-yellow-400 hover:bg-yellow-400/10 rounded-lg {{ request()->routeIs('admin.services.*') ? 'bg-yellow-400/10' : '' }}">
                     <i class="fas fa-wrench w-5"></i>
                     <span class="ml-3">Services</span>
-                </a>
+                </a> -->
                 <!-- Blog -->
                 <a href="{{ route('admin.blogs.index') }}" 
                    class="flex items-center px-4 py-2 text-yellow-400 hover:bg-yellow-400/10 rounded-lg {{ request()->routeIs('admin.blogs.*') ? 'bg-yellow-400/10' : '' }}">

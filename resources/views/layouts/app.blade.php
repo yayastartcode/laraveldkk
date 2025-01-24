@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Home') - {{ $settings['site_name'] ?? 'Dalbo Kencana Kreasi' }}</title>
+    <link rel="icon" href="{{ asset('storage/' . ($settings['site_favicon'] ?? '')) }}" type="image/x-icon">
     
     <!-- Meta Tags -->
     <meta name="description" content="{{ $settings['site_description'] ?? 'Professional Karoseri Services' }}">
@@ -17,6 +18,9 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     
     <!-- Custom Styles -->
     @stack('styles')
@@ -102,8 +106,6 @@
         @yield('content')
     </main>
 
-   
-
     @stack('scripts')
     @push('scripts')
     <script>
@@ -119,5 +121,20 @@
         });
     </script>
     @endpush
+    
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    
+    <!-- Initialize GLightbox -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true
+            });
+        });
+    </script>
 </body>
 </html>

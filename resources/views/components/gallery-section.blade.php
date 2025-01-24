@@ -4,7 +4,10 @@
         
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach($gallery as $image)
-            <div class="relative group cursor-pointer">
+            <a href="{{ asset('storage/' . $image->image) }}" 
+               class="glightbox relative group"
+               data-gallery="gallery1"
+               data-glightbox="title: {{ $image->title }}; description: {{ $image->category }}">
                 <img src="{{ asset('storage/' . $image->image) }}" 
                      alt="{{ $image->title }}" 
                      class="w-full h-64 object-cover rounded-lg">
@@ -15,7 +18,7 @@
                         <p class="text-yellow-100 text-sm">{{ $image->category }}</p>
                     </div>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>

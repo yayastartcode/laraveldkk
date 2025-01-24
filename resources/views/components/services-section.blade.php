@@ -96,7 +96,7 @@
                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 to-transparent"></div>
                     <div class="absolute bottom-4 left-4">
-                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">Perbaikan Bodi</h3>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">Body Repair</h3>
                         <div class="flex items-center space-x-2">
                             <span class="px-2 py-1 bg-yellow-400/20 rounded-full text-yellow-400 text-xs">Presisi</span>
                             <span class="px-2 py-1 bg-yellow-400/20 rounded-full text-yellow-400 text-xs">Garansi</span>

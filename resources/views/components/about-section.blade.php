@@ -7,13 +7,13 @@
                      alt="Auto Repair Shop" 
                      class="rounded-lg shadow-2xl">
                 <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-black p-6 rounded-lg shadow-xl hidden md:block">
-                    <p class="text-2xl font-bold">5+</p>
+                    <p class="text-2xl font-bold">3+</p>
                     <p class="text-sm font-semibold">Years Experience</p>
                 </div>
             </div>
             <div>
                 <h2 class="text-4xl font-bold text-yellow-400 mb-6">Tentang Kami</h2>
-                <p class="text-yellow-100 mb-6">PT Dalbo Kencana Kreasi, kami telah melayani komunitas kami dengan layanan perbaikan otomotif terbaik sejak 1998. Komitmen kami terhadap keunggulan dan kepuasan pelanggan telah menjadikan kami bengkel mobil yang paling dipercaya di wilayah ini.</p>
+                <p class="text-yellow-100 mb-6">PT Dalbo Kencana Kreasi, Berdiri tahun 2022, dan bergerak di bidang otomotif, dengan di dukung oleh sumber daya manusia yang berpengalaman di bidang otomotif. kami menjunjung tinggi kepuasan pelanggan melalui kualitas produk yang di hasilkan, harga yang kompetitif, pengerjaan sesuai estimasi waktu, kami berusaha untuk meningkatkan pelayanan dengan selalu berinovasi untuk terus menjadi lebih baik.</p>
                 <div class="space-y-4 text-yellow-100">
                     <div class="flex items-start">
                         <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
@@ -38,14 +38,14 @@
                     <i class="fas fa-eye text-2xl text-yellow-400 mr-4"></i>
                     <h3 class="text-2xl font-bold text-yellow-400">Visi Kami</h3>
                 </div>
-                <p class="text-yellow-100">Menjadi penyedia layanan perbaikan otomotif terkemuka, yang dikenal karena komitmen teguh kami terhadap kualitas, integritas, dan kepuasan pelanggan. Kami bertujuan untuk merevolusi industri perbaikan mobil melalui inovasi dan keunggulan.</p>
+                <p class="text-yellow-100">Menjadi perusahaan yang terus tumbuh dan berkembang dengan memenuhi kepentingan semua pihak yang terkait, mengembangkan potensi sumber daya manusia dalam bidang otomotif dan menjadikan perusahaan yang berkembang. kuatuntuk membantu ekonomi bangsa dan negara.</p>
             </div>
             <div class="bg-zinc-800 p-8 rounded-lg border border-yellow-400/20 hover:border-yellow-400/40 transition-colors duration-300 transform hover:scale-105 duration-300">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-bullseye text-2xl text-yellow-400 mr-4"></i>
                     <h3 class="text-2xl font-bold text-yellow-400">Misi Kami</h3>
                 </div>
-                <p class="text-yellow-100">Memberikan layanan perbaikan otomotif yang jujur, andal, dan profesional yang melampaui harapan pelanggan. Kami berkomitmen untuk mempertahankan standar tertinggi dalam hasil kerja sambil menawarkan harga yang wajar dan kompetitif.</p>
+                <p class="text-yellow-100">Menjadi perusahaan yang terus belajar (Continuous learning). Mengembangkan potensi sumber daya manusia, menjalin kerja sama yang baik dengan pihak terkait, menjaga. kepercayaan pelanggan, bekerja sama dan membatu. pihak terkait baik pemerintah atau swasta terutama di bidang otomotif.</p>
             </div>
         </div>
 

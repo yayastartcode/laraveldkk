@@ -12,7 +12,7 @@ class Slider extends Model
 
     protected $fillable = [
         'title',
-        'description',
+        'subtitle',
         'image',
         'button_text',
         'button_url',
@@ -41,7 +41,7 @@ class Slider extends Model
                 $slider = [
                     '_id' => (string)$document->_id,
                     'title' => $document->title ?? '',
-                    'description' => $document->description ?? '',
+                    'subtitle' => $document->subtitle ?? '',
                     'image' => $document->image ?? '',
                     'button_text' => $document->button_text ?? '',
                     'button_url' => $document->button_url ?? '',
