@@ -15,6 +15,14 @@
                     </div>
                     
                     <div>
+                        <label class="block text-yellow-100 mb-2">Email</label>
+                        <input type="email" 
+                               name="email" 
+                               required 
+                               class="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    </div>
+                    
+                    <div>
                         <label class="block text-yellow-100 mb-2">Phone</label>
                         <input type="tel" 
                                name="phone" 
@@ -23,8 +31,8 @@
                     </div>
                     
                     <div>
-                        <label class="block text-yellow-100 mb-2">Service Type</label>
-                        <select name="service_type" 
+                        <label class="block text-yellow-100 mb-2">Service</label>
+                        <select name="service" 
                                 required 
                                 class="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
                             <option value="">Select a service</option>
@@ -37,9 +45,26 @@
                     <div>
                         <label class="block text-yellow-100 mb-2">Preferred Date</label>
                         <input type="date" 
-                               name="date" 
+                               name="preferred_date" 
                                required 
+                               min="{{ date('Y-m-d') }}"
                                class="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    </div>
+
+                    <div>
+                        <label class="block text-yellow-100 mb-2">Preferred Time</label>
+                        <select name="preferred_time" 
+                                required 
+                                class="w-full px-4 py-2 rounded bg-black text-yellow-100 border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <option value="">Select a time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
                     </div>
                 </div>
                 

@@ -1,3 +1,7 @@
+@php
+$settings = App\Models\Setting::getSettings();
+@endphp
+
 <footer class="bg-zinc-900 text-yellow-100">
     <div class="container mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -8,18 +12,21 @@
                     Your trusted partner for all automotive needs. Specializing in karoseri, engine maintenance, and professional body repair services.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors">
+                    @if(isset($settings['social_media']['facebook']))
+                    <a href="{{ $settings['social_media']['facebook'] }}" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition-colors">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors">
+                    @endif
+                    @if(isset($settings['social_media']['instagram']))
+                    <a href="{{ $settings['social_media']['instagram'] }}" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition-colors">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-yellow-400 hover:text-yellow-300 transition-colors">
-                        <i class="fab fa-linkedin-in"></i>
+                    @endif
+                    @if(isset($settings['social_media']['youtube']))
+                    <a href="{{ $settings['social_media']['youtube'] }}" target="_blank" class="text-yellow-400 hover:text-yellow-300 transition-colors">
+                        <i class="fab fa-youtube"></i>
                     </a>
+                    @endif
                 </div>
             </div>
             
@@ -45,25 +52,30 @@
                 </ul>
             </div>
             
-            <!-- Services -->
+            <!-- Contact Info -->
             <div>
-                <h3 class="text-xl font-semibold text-yellow-400 mb-6">Our Services</h3>
+                <h3 class="text-xl font-semibold text-yellow-400 mb-6">Contact Us</h3>
                 <ul class="space-y-4">
-                    <li>
-                        <a href="#" class="hover:text-yellow-400 transition-colors">Karoseri</a>
+                    @if(isset($settings['contact_phone']))
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-phone text-yellow-400"></i>
+                        <span>{{ $settings['contact_phone'] }}</span>
                     </li>
-                    <li>
-                        <a href="#" class="hover:text-yellow-400 transition-colors">Engine Maintenance</a>
+                    @endif
+                    @if(isset($settings['contact_email']))
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-yellow-400"></i>
+                        <a href="mailto:{{ $settings['contact_email'] }}" class="hover:text-yellow-400 transition-colors">
+                            {{ $settings['contact_email'] }}
+                        </a>
                     </li>
-                    <li>
-                        <a href="#" class="hover:text-yellow-400 transition-colors">Body Repair</a>
+                    @endif
+                    @if(isset($settings['address']))
+                    <li class="flex space-x-3">
+                        <i class="fas fa-map-marker-alt text-yellow-400 mt-1"></i>
+                        <span>{{ $settings['address'] }}</span>
                     </li>
-                    <li>
-                        <a href="#" class="hover:text-yellow-400 transition-colors">Paint Services</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-yellow-400 transition-colors">Custom Modifications</a>
-                    </li>
+                    @endif
                 </ul>
             </div>
             

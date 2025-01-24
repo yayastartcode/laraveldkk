@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-header :logo-text="'Dalbo Kencana Kreasi'" />
+
 
     <main class="bg-black text-yellow-100 pt-[var(--header-height)]">
         <div class="container mx-auto px-6 py-20">
@@ -35,5 +35,4 @@
         </div>
     </main>
 
-    <x-footer />
 @endsection

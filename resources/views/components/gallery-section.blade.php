@@ -5,14 +5,14 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach($gallery as $image)
             <div class="relative group cursor-pointer">
-                <img src="{{ $image['url'] }}" 
-                     alt="{{ $image['title'] }}" 
+                <img src="{{ asset('storage/' . $image->image) }}" 
+                     alt="{{ $image->title }}" 
                      class="w-full h-64 object-cover rounded-lg">
                      
                 <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-300 rounded-lg flex items-center justify-center">
                     <div class="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-yellow-400 font-semibold mb-2">{{ $image['title'] }}</h3>
-                        <p class="text-yellow-100 text-sm">{{ $image['category'] }}</p>
+                        <h3 class="text-yellow-400 font-semibold mb-2">{{ $image->title }}</h3>
+                        <p class="text-yellow-100 text-sm">{{ $image->category }}</p>
                     </div>
                 </div>
             </div>

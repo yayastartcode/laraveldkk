@@ -33,15 +33,11 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', 27017),
+            'dsn' => env('MONGODB_URI'),
             'database' => env('DB_DATABASE', 'dkkmongo'),
-            'username' => env('DB_USERNAME', ''),
-            'password' => env('DB_PASSWORD', ''),
-            'dsn' => env('MONGODB_URI', ''),
             'options' => [
-                'appname' => 'DKK Mongo',
                 'retryWrites' => true,
+                'w' => 'majority',
             ],
         ],
 
