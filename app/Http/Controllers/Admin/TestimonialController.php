@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use MongoDB\BSON\ObjectId;
 use Illuminate\Support\Facades\Storage;
 
 class TestimonialController extends Controller
@@ -59,9 +60,7 @@ class TestimonialController extends Controller
 
     public function edit($id)
     {
-        $testimonial = Testimonial::raw(function($collection) use ($id) {
-            return $collection->findOne(['_id' => new ObjectId($id)]);
-        });
+        $testimonial = Testimonial::find(new ObjectId($id));
 
         if (!$testimonial) {
             return redirect()->route('admin.testimonials.index')
@@ -85,9 +84,7 @@ class TestimonialController extends Controller
             ]);
 
             if ($request->hasFile('image')) {
-                $testimonial = Testimonial::raw(function($collection) use ($id) {
-                    return $collection->findOne(['_id' => new ObjectId($id)]);
-                });
+                $testimonial = Testimonial::find(new ObjectId($id));
                 if ($testimonial && $testimonial->image) {
                     Storage::disk('public')->delete($testimonial->image);
                 }
@@ -115,9 +112,7 @@ class TestimonialController extends Controller
     public function destroy($id)
     {
         try {
-            $testimonial = Testimonial::raw(function($collection) use ($id) {
-                return $collection->findOne(['_id' => new ObjectId($id)]);
-            });
+            $testimonial = Testimonial::find(new ObjectId($id));
 
             if ($testimonial) {
                 if ($testimonial->image) {
